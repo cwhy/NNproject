@@ -1,6 +1,6 @@
 import numpy as np
 import numpy.random as rnd
-from fakedata import GaussianBall, GaussianLine  # , GaussianXOR
+from fakedata import GaussianBall, GaussianLine, GaussianXOR
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import cm
 # rnd.seed(120)
@@ -34,7 +34,7 @@ max_iter = 100000
 N_sample = N_sample_e * N_groups
 data = GaussianBall(dim, N_sample_e, N_groups)
 data = GaussianLine(dim, N_sample_e, N_groups, 100)
-# data = GaussianXOR(dim, N_sample_e, N_groups)
+data = GaussianXOR(dim, N_sample_e, N_groups)
 alpha = [0.01]*3
 X = data.X
 y = data.y
